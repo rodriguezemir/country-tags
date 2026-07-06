@@ -5,6 +5,10 @@ api-version: "1.21.11"
 softdepend: [PlaceholderAPI]
 author: volcqnn
 description: A Minecraft plugin that adds country tags to players based on their IP address.
+commands:
+  countrytag:
+    description: Opens a dialog to select your country.
+    usage: /countrytag
 permissions:
   countrytags.tag.show:
     description: Allows the player's country tag to be displayed.
