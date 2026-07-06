@@ -1,15 +1,11 @@
 main: ${PACKAGE}.Main
 name: ${NAME}
 version: "${VERSION}"
-api-version: "26.1.2"
-author: AUTHOR
-description: DESCRIPTION
+api-version: "1.21.11"
+softdepend: [PlaceholderAPI]
+author: volcqnn
+description: A Minecraft plugin that adds country tags to players based on their IP address.
 permissions:
-  example.use:
-    description: Allows use of the /example command
+  countrytags.tag.show:
+    description: Allows the player's country tag to be displayed.
     default: true
-  example.*:
-    description: Grants all other permissions
-    default: false
-    children:
-      example.use: true

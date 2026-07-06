@@ -1,5 +1,4 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
-import com.github.spotbugs.snom.SpotBugsTask
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.TimeZone
@@ -38,6 +37,14 @@ repositories {
         }
     }
 
+    maven {
+        name = "minecraft-libraries"
+        url = uri("https://libraries.minecraft.net")
+        content {
+            includeGroup("com.mojang")
+        }
+    }
+
     mavenCentral()
 
     maven {
@@ -45,6 +52,7 @@ repositories {
         url = uri("https://jitpack.io")
         content {
             includeGroup("com.github.CrimsonWarpedcraft")
+            includeGroup("com.github.PlaceholderAPI")
         }
     }
 }
@@ -53,6 +61,7 @@ val mockitoAgent = configurations.create("mockitoAgent")
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:26.1.2.build.72-stable")
+    compileOnly("com.github.PlaceholderAPI:PlaceholderAPI:2.11.6")
 }
 
 
