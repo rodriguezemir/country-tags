@@ -1,0 +1,13 @@
+# CountryTags configuration
+
+api:
+  # GET endpoint used to resolve the player's country from their IP.
+  # The {ip} placeholder is replaced with the player's IP address.
+  # The response must be JSON containing a "countryCode" field (ISO alpha-2).
+  url: "https://free.freeipapi.com/api/json/{ip}"
+
+permission:
+  # When enabled, the tag is only shown to players that have the permission node below.
+  # When disabled, the tag is shown to everyone.
+  enabled: true
+  node: "countrytags.tag.show"
